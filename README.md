@@ -8,29 +8,41 @@ Used stacks are ```React + webpack 4 +  API(pixabay) + media query```
 ### Step 1
 Make a new project 
 
-```mkdir react-responsive-carousel && cd $_ && yarn init -y```
+```
+mkdir react-responsive-carousel && cd $_ && yarn init -y
+```
 
 #### Setting Up React and Babel
 
 We need to install webpack as a **dev dependency** and webpack-cli
 
-```yarn add webpack webpack-cli webpack-dev-server```
+```
+yarn add webpack webpack-cli webpack-dev-server
+```
 
 Install react and react-dom as a **dependency**
 
-```yarn add react react-dom```
+```
+yarn add react react-dom
+```
 
 Then install babel as a **dev dependency**
 
-``` @babel/core @babel/preset-env @babel/preset-react babel-loader html-webpack-plugin --dev```  
+``` 
+@babel/core @babel/preset-env @babel/preset-react babel-loader html-webpack-plugin --dev
+```  
 
 Create config files
 
-```touch webpack.config.js .babelrc README.md .gitignore```
+```
+touch webpack.config.js .babelrc README.md .gitignore
+```
 
 Create `src` directory and `index` files
 
- ```mkdir src && cd $_ && touch index.js index.html```
+ ```
+ mkdir src && cd $_ && touch index.js index.html
+ ```
 
 ### Step 2
 
