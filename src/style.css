@@ -19,12 +19,22 @@ body {
   padding: 40px 0;
   text-align: center;
 }
-ul,li{
-  list-style: none;
-  display:flex;
-  justify-content: center
+.carousel-container {
+  position: relative;
+  max-width: 1250px;
+  transition: 0.2s all;
 }
 
-li {
-  float: left
+.image-holder {
+  display: inline;
+  margin: 0 15px 0 0;
+}
+
+.image-holder span {
+  display: inline-grid;
+}
+
+.user-name {
+  display: inline-grid;
+  padding: 15px 0;
 }

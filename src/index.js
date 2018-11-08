@@ -3,40 +3,48 @@ import ReactDOM from "react-dom";
 /** local component */
 import "./style.css";
 
+/** config */
+const API_URL = "https://pixabay.com/api/";
+const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";
+
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      data: [
-        {
-          "imgUrl": "https://cdn.pixabay.com/user/2018/01/12/08-06-25-409_250x250.jpg"
-        },
-        {
-          "imgUrl": "https://cdn.pixabay.com/user/2015/12/01/20-20-44-483_250x250.jpg"
-        },
-        {
-          "imgUrl": "https://cdn.pixabay.com/user/2016/09/22/02-22-02-467_250x250.jpg"
-        }
-      ]
+      data: []
     }
   }
+  /** lifecycle would be started after page rendered */
+  componentDidMount() {
+    fetch(`${API_URL}?key=${API_KEY}&q=beautiful+landscape&image_type=photo`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          data: data.hits
+        })
+      })
+  }
+
   render() {
     return (
       <div className="main-container">
         <h1 className="header">React Responsive Carousel</h1>
-        <ul>
+        <div className="carousel-container">
           {
             this.state.data.map((user, i) => {
               return (
-                <li key={i} >
-                  <img src={user.imgUrl} alt={i} width={250} />
-                </li>
+                (user.largeImageURL !== "") &&
+                <div className="image-holder" key={i}>
+                  <span>
+                    <img src={user.largeImageURL} alt={user.user} width={250} height={200} />
+                    <span className="user-name">{user.user}</span>
+                  </span>
+                </div>
               )
-              // console.log(user)
             })
           }
-        </ul>
+        </div>
       </div>
     );
   }
