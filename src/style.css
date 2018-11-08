@@ -19,6 +19,9 @@ body {
   padding: 40px 0;
   text-align: center;
 }
+
+/** carousel */
+
 .carousel-container {
   position: relative;
   max-width: 1250px;
@@ -37,4 +40,23 @@ body {
 .user-name {
   display: inline-grid;
   padding: 15px 0;
+}
+
+/** button section*/
+
+.button-section {
+  width: 1250px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.button-section img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.button-section img:hover {
+  opacity: 0.5
 }

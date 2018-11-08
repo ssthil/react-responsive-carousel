@@ -27,6 +27,12 @@ class App extends Component {
   }
 
   render() {
+
+    const prevRotate = 180;
+    const prevArrow = {
+      transform: `rotate(${prevRotate}deg)`
+    }
+    
     return (
       <div className="main-container">
         <h1 className="header">React Responsive Carousel</h1>
@@ -44,6 +50,10 @@ class App extends Component {
               )
             })
           }
+        </div>
+        <div className="button-section">
+          <img src={"./src/resource/arrow.svg"} alt="prev" style={prevArrow} />
+          <img src={"./src/resource/arrow.svg"} alt="next" />
         </div>
       </div>
     );
