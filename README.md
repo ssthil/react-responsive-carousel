@@ -1,4 +1,4 @@
-# React responsive carousel
+# React Responsive Carousel
 
 This react app with webpack 4 and latest babel config. This is a very basic responsive carousel app using React.
 
