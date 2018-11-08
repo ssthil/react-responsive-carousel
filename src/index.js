@@ -12,7 +12,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      marginLeft: 0,
+      marginRight: 0
     }
   }
   /** lifecycle would be started after page rendered */
@@ -25,18 +27,30 @@ class App extends Component {
         })
       })
   }
+  /** prev button click event */
+  prevButtonClick = () => {
+    this.setState({
+      marginLeft: this.state.marginLeft - 265
+    })
+  }
+  /** next button click event */
+  nextButtonClick = () => {
+    this.setState({
+      marginLeft: this.state.marginLeft + 265
+    })
+  }
 
   render() {
-
+    /** prev button rotate */
     const prevRotate = 180;
     const prevArrow = {
       transform: `rotate(${prevRotate}deg)`
     }
-    
+
     return (
       <div className="main-container">
         <h1 className="header">React Responsive Carousel</h1>
-        <div className="carousel-container">
+        <div className="carousel-container" style={{marginLeft: this.state.marginLeft}}>
           {
             this.state.data.map((user, i) => {
               return (
@@ -52,8 +66,8 @@ class App extends Component {
           }
         </div>
         <div className="button-section">
-          <img src={"./src/resource/arrow.svg"} alt="prev" style={prevArrow} />
-          <img src={"./src/resource/arrow.svg"} alt="next" />
+          <img src={"./src/resource/arrow.svg"} onClick={this.prevButtonClick} alt="prev" style={prevArrow} />
+          <img src={"./src/resource/arrow.svg"} onClick={this.nextButtonClick} alt="next" />
         </div>
       </div>
     );
