@@ -6,8 +6,8 @@ import "./style.css";
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>React Responsive Carousel</h1>
+      <div className="main-container">
+        <h1 className="header">React Responsive Carousel</h1>
       </div>
     );
   }
