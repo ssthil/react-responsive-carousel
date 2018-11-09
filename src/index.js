@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 /** local component */
 import "./style.css";
-
+import Carousel from "./components/Carousel";
+import Arrows from "./components/Arrows";
 /** config */
 const API_URL = "https://pixabay.com/api/";
 const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -41,34 +41,28 @@ class App extends Component {
   }
 
   render() {
-    /** prev button rotate */
-    const prevRotate = 180;
-    const prevArrow = {
-      transform: `rotate(${prevRotate}deg)`
-    }
-
     return (
       <div className="main-container">
         <h1 className="header">React Responsive Carousel</h1>
-        <div className="carousel-container" style={{marginLeft: this.state.marginLeft}}>
+        <div className="carousel-container" style={{ marginLeft: this.state.marginLeft }}>
           {
             this.state.data.map((user, i) => {
               return (
                 (user.largeImageURL !== "") &&
-                <div className="image-holder" key={i}>
-                  <span>
-                    <img src={user.largeImageURL} alt={user.user} width={250} height={200} />
-                    <span className="user-name">{user.user}</span>
-                  </span>
-                </div>
+                <Carousel 
+                  imgUrl={user.largeImageURL} 
+                  alt={user.user} 
+                  userName={user.user} 
+                  key={i} 
+                />
               )
             })
           }
         </div>
-        <div className="button-section">
-          <img src={"./src/resource/arrow.svg"} onClick={this.prevButtonClick} alt="prev" style={prevArrow} />
-          <img src={"./src/resource/arrow.svg"} onClick={this.nextButtonClick} alt="next" />
-        </div>
+        <Arrows
+          prevClick={this.prevButtonClick}
+          nextClick={this.nextButtonClick}
+        />
       </div>
     );
   }
