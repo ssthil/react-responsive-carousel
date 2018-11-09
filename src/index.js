@@ -6,14 +6,16 @@ import Carousel from "./components/Carousel";
 import Arrows from "./components/Arrows";
 /** config */
 const API_URL = "https://pixabay.com/api/";
-const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";
+const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";;
+
+const sliderDistance = 265
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       data: [],
-      marginLeft: 0,
+      marginLeft: -(3*sliderDistance),
       marginRight: 0
     }
   }
@@ -30,13 +32,13 @@ class App extends Component {
   /** prev button click event */
   prevButtonClick = () => {
     this.setState({
-      marginLeft: this.state.marginLeft - 265
+      marginLeft: this.state.marginLeft - sliderDistance
     })
   }
   /** next button click event */
   nextButtonClick = () => {
     this.setState({
-      marginLeft: this.state.marginLeft + 265
+      marginLeft: this.state.marginLeft + sliderDistance
     })
   }
 
