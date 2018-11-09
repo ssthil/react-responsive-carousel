@@ -6,7 +6,7 @@ import Carousel from "./components/Carousel";
 import Arrows from "./components/Arrows";
 /** config */
 const API_URL = "https://pixabay.com/api/";
-const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";;
+const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";
 
 const sliderDistance = 265;
 
