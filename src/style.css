@@ -5,7 +5,7 @@ body {
 }
 
 .main-container {
-  width: 1250px;
+  width: 1310px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
 /** carousel */
 
 .carousel-container {
-  width: 1250px;
+  width: 1310px;
   transition: 0.5s all;
 }
 
@@ -45,7 +45,7 @@ body {
 /** button section*/
 
 .button-section {
-  width: 1250px;
+  width: 1310px;
   margin: 40px auto 0;
   text-align: center;
 }
@@ -55,6 +55,7 @@ body {
   height: 25px;
   cursor: pointer;
   transition: 0.2s ease-out;
+  display: initial;
 }
 
 .button-section img:hover {

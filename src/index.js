@@ -8,14 +8,14 @@ import Arrows from "./components/Arrows";
 const API_URL = "https://pixabay.com/api/";
 const API_KEY = "9656065-a4094594c34f9ac14c7fc4c39";;
 
-const sliderDistance = 265
+const sliderDistance = 265;
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       data: [],
-      marginLeft: -(3*sliderDistance),
+      marginLeft: -(3 * sliderDistance),
       marginRight: 0
     }
   }
@@ -29,6 +29,7 @@ class App extends Component {
         })
       })
   }
+
   /** prev button click event */
   prevButtonClick = () => {
     this.setState({
@@ -51,11 +52,11 @@ class App extends Component {
             this.state.data.map((user, i) => {
               return (
                 (user.largeImageURL !== "") &&
-                <Carousel 
-                  imgUrl={user.largeImageURL} 
-                  alt={user.user} 
-                  userName={user.user} 
-                  key={i} 
+                <Carousel
+                  imgUrl={user.largeImageURL}
+                  alt={user.user}
+                  userName={user.user}
+                  key={i}
                 />
               )
             })
