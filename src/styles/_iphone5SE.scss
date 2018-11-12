@@ -1,0 +1,91 @@
+/** mobile responsive*/
+
+/* Smartphones iphone 5, SE (portrait) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .main-container {
+        width: 350px;
+        .header {
+            padding: 20px 0;
+            font-size: 20px;
+        }
+        .image-holder {
+            width: 350px;
+            margin: 0 5px 0 0;
+            img {
+                height: 260px;
+            }
+            .user-name {
+                text-align: center;
+            }
+        }
+        .button-section {
+            width: 100%;
+            position: absolute;
+            margin: 31px auto 0;
+            text-align: left;
+            img {
+                width: 25px;
+                height: 35px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+                background: rgba(245, 245, 245, 0.5);
+                padding: 5px 5px 5px 10px;
+                &:hover {
+                    opacity: 0.3;
+                }
+                &:first-child {
+                    float: left;
+                }
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .main-container {
+        width: 1305px;
+    }
+    .header {
+        padding: 40px 0;
+        font-size: 20px;
+    }
+    .image-holder {
+        width: 650px;
+        margin: 0 5px 0 0;
+        img {
+            height: 500px;
+        }
+        .user-name {
+            text-align: center;
+        }
+    }
+    .button-section {
+        width: 100%;
+        position: absolute;
+        margin: 31px auto 0;
+        text-align: left;
+        img {
+            width: 25px;
+            height: 35px;
+            cursor: pointer;
+            transition: 0.2s ease-out;
+            background: rgba(245, 245, 245, 0.5);
+            padding: 5px 5px 5px 10px;
+            &:hover {
+                opacity: 0.3;
+            }
+            &:first-child {
+                float: left;
+            }
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+}

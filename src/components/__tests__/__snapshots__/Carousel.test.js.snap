@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel tests renders list of users image 1`] = `
+"<div className=\\"image-holder\\">
+  <div>
+    <img src={[undefined]} alt={[undefined]} />
+    <div className=\\"user-name\\" />
+  </div>
+</div>"
+`;
